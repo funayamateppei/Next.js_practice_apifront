@@ -5,7 +5,6 @@ import { useRouter } from 'next/router'
 
 export const useAuth = ({ middleware, redirectIfAuthenticated } = {}) => {
     const router = useRouter()
-    axios.defaults.baseURL = 'http://localhost' // サーバのドメインを設定
 
     const { data: user, error, mutate } = useSWR('/api/user', () =>
         axios
