@@ -1,7 +1,13 @@
 {
-  "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/login": "pages/login.js",
-  "/dashboard": "pages/dashboard.js"
+  "/_app": "pages/_app.js",
+  "/forgot-password": "pages/forgot-password.html",
+  "/dashboard": "pages/dashboard.html",
+  "/login": "pages/login.html",
+  "/404": "pages/404.html",
+  "/password-reset/[token]": "pages/password-reset/[token].html",
+  "/verify-email": "pages/verify-email.html",
+  "/": "pages/index.html",
+  "/_error": "pages/_error.js",
+  "/register": "pages/register.html"
 }
