@@ -7,7 +7,6 @@ export default function Home() {
 
     return (
         <>
-            <meta name="csrf-token" content="{{ csrf_token() }}"></meta>
             <Head>
                 <title>Laravel</title>
             </Head>
