@@ -1,16 +1,7 @@
 import AppLayout from '@/components/Layouts/AppLayout'
 import Head from 'next/head'
-import axios from '@/lib/axios'
 
 const MainPage = () => {
-
-    const getAuthUser = () => {
-        axios.get('/api/posts')
-            .then((response) => {
-                console.log(response);
-        })
-    }
-
     return (
         <AppLayout
             header={
@@ -21,7 +12,6 @@ const MainPage = () => {
             <Head>
                 <title>Main Page</title>
             </Head>
-            <button onClick={getAuthUser}>ボタン</button>
         </AppLayout>
     )
 }

@@ -1,8 +1,6 @@
 import AppLayout from "@/components/Layouts/AppLayout";
 import Head from "next/head";
 
-import React from 'react'
-
 const BlogPage = () => {
   return (
       <AppLayout
