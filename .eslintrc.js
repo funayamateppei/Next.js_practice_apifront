@@ -1,4 +1,9 @@
 module.exports = {
+    settings: {
+        react: {
+            version: 'detect',
+        },
+    },
     root: true,
     parser: '@babel/eslint-parser',
     env: {
@@ -11,7 +16,7 @@ module.exports = {
         'eslint:recommended',
         'plugin:react/recommended',
         'plugin:prettier/recommended',
-        'next',
+        'plugin:@next/next/recommended',
     ],
     parserOptions: {
         ecmaFeatures: {
@@ -20,7 +25,7 @@ module.exports = {
         ecmaVersion: 2020,
         requireConfigFile: false,
     },
-    plugins: ['react', '@next/eslint-plugin-next', 'prettier'],
+    plugins: ['react', '@next/eslint-plugin-next', 'prettier', 'jsx'],
     rules: {
         'import/prefer-default-export': 0,
         'no-console': 'warn',

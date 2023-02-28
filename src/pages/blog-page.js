@@ -1,6 +1,6 @@
 import AppLayout from '@/components/Layouts/AppLayout'
 import Head from 'next/head'
-import getAllPostsData from '@/lib/posts'
+import {getAllPostsData, } from '@/lib/posts'
 import Post from '@/components/Post'
 
 const BlogPage = ({ posts }) => {
