@@ -8,7 +8,7 @@ import React from 'react'
 export default function Post({ post }) {
     const router = useRouter()
 
-    if (!post) {
+    if (router.isFallback || !post) {
         return <div>Loading...</div>
     }
 
@@ -52,7 +52,7 @@ export async function getStaticPaths() {
     const paths = await getAllPostIds()
     return {
         paths: paths,
-        fallback: false,
+        fallback: true,
     }
 }
 
