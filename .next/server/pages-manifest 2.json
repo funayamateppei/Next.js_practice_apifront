@@ -1,0 +1,16 @@
+{
+  "/_app": "pages/_app.js",
+  "/forgot-password": "pages/forgot-password.html",
+  "/": "pages/index.html",
+  "/login": "pages/login.html",
+  "/main-page": "pages/main-page.html",
+  "/password-reset/[token]": "pages/password-reset/[token].html",
+  "/verify-email": "pages/verify-email.html",
+  "/register": "pages/register.html",
+  "/_document": "pages/_document.js",
+  "/404": "pages/404.html",
+  "/_error": "pages/_error.js",
+  "/posts/[id]": "pages/posts/[id].js",
+  "/blog-page": "pages/blog-page.js",
+  "/task-page": "pages/task-page.js"
+}

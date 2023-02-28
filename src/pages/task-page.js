@@ -1,9 +1,9 @@
 import AppLayout from '@/components/Layouts/AppLayout'
 import Head from 'next/head'
+import { getAllTasksData } from '@/lib/tasks'
+import Task from '@/components/Task'
 
-import React from 'react'
-
-const BlogPage = () => {
+const TaskPage = ({ tasks }) => {
     return (
         <AppLayout
             header={
@@ -14,8 +14,23 @@ const BlogPage = () => {
             <Head>
                 <title>Task Page</title>
             </Head>
+            <div className="flex justify-center">
+                <ul>
+                    {tasks &&
+                        tasks.map(task => <Task key={task.id} task={task} />)}
+                </ul>
+            </div>
         </AppLayout>
     )
 }
 
-export default BlogPage
+export default TaskPage
+
+export async function getStaticProps() {
+    const tasks = await getAllTasksData()
+    return {
+        props: {
+            tasks,
+        },
+    }
+}

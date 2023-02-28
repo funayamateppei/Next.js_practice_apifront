@@ -1,16 +1,16 @@
 {
+  "/_document": "pages/_document.js",
   "/_app": "pages/_app.js",
   "/forgot-password": "pages/forgot-password.html",
-  "/": "pages/index.html",
   "/login": "pages/login.html",
   "/main-page": "pages/main-page.html",
+  "/": "pages/index.html",
   "/password-reset/[token]": "pages/password-reset/[token].html",
-  "/verify-email": "pages/verify-email.html",
-  "/task-page": "pages/task-page.html",
-  "/404": "pages/404.html",
-  "/_document": "pages/_document.js",
-  "/_error": "pages/_error.js",
   "/register": "pages/register.html",
+  "/verify-email": "pages/verify-email.html",
+  "/_error": "pages/_error.js",
+  "/404": "pages/404.html",
   "/blog-page": "pages/blog-page.js",
+  "/task-page": "pages/task-page.js",
   "/posts/[id]": "pages/posts/[id].js"
 }
