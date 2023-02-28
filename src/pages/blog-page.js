@@ -1,6 +1,6 @@
 import AppLayout from '@/components/Layouts/AppLayout'
 import Head from 'next/head'
-import {getAllPostsData, } from '@/lib/posts'
+import { getAllPostsData } from '@/lib/posts'
 import Post from '@/components/Post'
 
 const BlogPage = ({ posts }) => {
@@ -13,14 +13,13 @@ const BlogPage = ({ posts }) => {
             }>
             <Head>
                 <title>Blog Page</title>
-        </Head>
-        <div className="flex justify-center">
-          <ul>
-            {posts && posts.map((post) => (
-              <Post key={post.id} post={post} />
-            ))}
-          </ul>
-        </div>
+            </Head>
+            <div className="flex justify-center">
+                <ul>
+                    {posts &&
+                        posts.map(post => <Post key={post.id} post={post} />)}
+                </ul>
+            </div>
         </AppLayout>
     )
 }
@@ -33,5 +32,6 @@ export async function getStaticProps() {
         props: {
             posts,
         },
+        revalidate: 3,
     }
 }
