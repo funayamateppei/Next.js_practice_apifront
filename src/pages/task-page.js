@@ -6,6 +6,7 @@ import useSWR from 'swr'
 import axios from '@/lib/axios'
 import { useEffect } from 'react'
 import StateContextProvider from '@/context/StateContext'
+import TaskForm from '@/components/TaskForm'
 
 const TaskPage = ({ tasks }) => {
     const fetcher = url => {
@@ -33,7 +34,8 @@ const TaskPage = ({ tasks }) => {
                 <Head>
                     <title>Task Page</title>
                 </Head>
-                <div className="flex justify-center">
+                <div className="flex justify-center items-center flex-col">
+                <TaskForm taskCreated={mutate} />
                     <ul>
                         {swrTasks &&
                             swrTasks.map(task => (
