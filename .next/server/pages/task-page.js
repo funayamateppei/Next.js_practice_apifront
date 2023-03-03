@@ -141,7 +141,8 @@ async function getStaticProps() {
     return {
         props: {
             tasks
-        }
+        },
+        revalidate: 3
     };
 }
 
