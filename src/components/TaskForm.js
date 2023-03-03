@@ -8,7 +8,7 @@ export default function TaskForm({ taskCreated }) {
     const create = async e => {
         e.preventDefault()
         const params = {
-            title: JSON.stringify(selectedTask.title),
+            title: selectedTask.title,
         }
         await axios.post('/api/tasks', params).then(response => {
             setSelectedTask({ id: 0, title: '' })
@@ -19,7 +19,7 @@ export default function TaskForm({ taskCreated }) {
     const update = async e => {
         e.preventDefault()
         const params = {
-            title: JSON.stringify(selectedTask.title),
+            title: selectedTask.title,
         }
         axios.put(`/api/tasks/${selectedTask.id}`, params).then(response => {
             setSelectedTask({ id: 0, title: '' })
