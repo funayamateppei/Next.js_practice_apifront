@@ -2,7 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/task-page": "pages/task-page.js",
-  "/blog-page": "pages/blog-page.js",
-  "/404": "pages/404.js"
+  "/task-page": "pages/task-page.js"
 }

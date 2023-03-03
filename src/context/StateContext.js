@@ -1,4 +1,4 @@
-import { createContext, useState } from "react/cjs/react.production.min"
+import { createContext, useState } from "react"
 
 export const StateContext = createContext();
 
