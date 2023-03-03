@@ -87,14 +87,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _lib_tasks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(1885);
 /* harmony import */ var _components_Task__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(2105);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components_Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_1__]);
-_components_Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+/* harmony import */ var swr__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(5941);
+/* harmony import */ var _lib_axios__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(5814);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components_Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_1__, swr__WEBPACK_IMPORTED_MODULE_5__]);
+([_components_Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_1__, swr__WEBPACK_IMPORTED_MODULE_5__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
+
+
 
 
 
 
 
 const TaskPage = ({ tasks  })=>{
+    const fetcher = (url)=>{
+        return (0,_lib_axios__WEBPACK_IMPORTED_MODULE_6__/* ["default"] */ .Z)(url).then((response)=>response.data);
+    };
+    const apiUrl = `${"http://localhost"}/api/tasks`;
+    const { data: swrTasks , mutate  } = (0,swr__WEBPACK_IMPORTED_MODULE_5__["default"])(apiUrl, fetcher, {
+        fallbackData: tasks
+    });
+    // ページが表示されたときにCSRを実行してデータを最新のものにする
+    (0,react__WEBPACK_IMPORTED_MODULE_7__.useEffect)(()=>{
+        mutate();
+    }, []);
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_components_Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z, {
         header: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h2", {
             className: "font-semibold text-xl text-gray-800 leading-tight",
@@ -109,7 +127,7 @@ const TaskPage = ({ tasks  })=>{
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                 className: "flex justify-center",
                 children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("ul", {
-                    children: tasks && tasks.map((task)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_Task__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z, {
+                    children: swrTasks && swrTasks.map((task)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_Task__WEBPACK_IMPORTED_MODULE_4__/* ["default"] */ .Z, {
                             task: task
                         }, task.id))
                 })
