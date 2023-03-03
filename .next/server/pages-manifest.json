@@ -3,14 +3,15 @@
   "/_document": "pages/_document.js",
   "/404": "pages/404.html",
   "/forgot-password": "pages/forgot-password.html",
+  "/": "pages/index.html",
   "/login": "pages/login.html",
   "/main-page": "pages/main-page.html",
   "/password-reset/[token]": "pages/password-reset/[token].html",
   "/register": "pages/register.html",
-  "/": "pages/index.html",
   "/verify-email": "pages/verify-email.html",
   "/_error": "pages/_error.js",
   "/blog-page": "pages/blog-page.js",
   "/posts/[id]": "pages/posts/[id].js",
-  "/task-page": "pages/task-page.js"
+  "/task-page": "pages/task-page.js",
+  "/tasks/[id]": "pages/tasks/[id].js"
 }

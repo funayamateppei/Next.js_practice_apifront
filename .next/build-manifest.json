@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/SWWo9zO0kqnhP586X8X7o/_buildManifest.js",
-    "static/SWWo9zO0kqnhP586X8X7o/_ssgManifest.js"
+    "static/Hitoe9aYE08eAjNro3VQG/_buildManifest.js",
+    "static/Hitoe9aYE08eAjNro3VQG/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -104,7 +104,15 @@
       "static/chunks/145-c665124dbf695f88.js",
       "static/chunks/961-2f472524d2ced6fc.js",
       "static/chunks/400-8f578c874ffec14a.js",
-      "static/chunks/pages/task-page-86948727f48de21d.js"
+      "static/chunks/pages/task-page-34a19f283c4e1943.js"
+    ],
+    "/tasks/[id]": [
+      "static/chunks/webpack-7a6cea4e6a92562f.js",
+      "static/chunks/framework-ffee79c6390da51e.js",
+      "static/chunks/main-e71c796c4d7cc2e4.js",
+      "static/chunks/814-0f4d62f367f5a7ce.js",
+      "static/chunks/145-c665124dbf695f88.js",
+      "static/chunks/pages/tasks/[id]-7caa43879207453f.js"
     ],
     "/verify-email": [
       "static/chunks/webpack-7a6cea4e6a92562f.js",

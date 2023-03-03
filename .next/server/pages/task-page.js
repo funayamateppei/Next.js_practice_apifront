@@ -26,9 +26,12 @@ function Task({ task  }) {
                     " : "
                 ]
             }),
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
-                className: "cursor-pointer border-b border-gray-400 hover:bg-gray-600",
-                children: task.title
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_1___default()), {
+                href: `/tasks/${task.id}`,
+                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                    className: "cursor-pointer border-b border-gray-400 hover:bg-gray-600",
+                    children: task.title
+                })
             })
         ]
     });
@@ -41,9 +44,10 @@ function Task({ task  }) {
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Es": () => (/* binding */ getAllTasksData)
+/* harmony export */   "Es": () => (/* binding */ getAllTasksData),
+/* harmony export */   "H8": () => (/* binding */ getTaskData),
+/* harmony export */   "LO": () => (/* binding */ getAllTaskIds)
 /* harmony export */ });
-/* unused harmony exports getAllTaskIds, getTaskData */
 /* harmony import */ var _axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5814);
 
 async function getAllTasksData() {
@@ -52,7 +56,7 @@ async function getAllTasksData() {
     return tasks;
 }
 async function getAllTaskIds() {
-    const response = await axios.get("/api/tasks");
+    const response = await _axios__WEBPACK_IMPORTED_MODULE_0__/* ["default"].get */ .Z.get("/api/tasks");
     const tasks = await response.data;
     return await tasks.map((task)=>{
         return {
@@ -63,7 +67,7 @@ async function getAllTaskIds() {
     });
 }
 async function getTaskData(id) {
-    const response = await axios.get(`/api/tasks/${id}`);
+    const response = await _axios__WEBPACK_IMPORTED_MODULE_0__/* ["default"].get */ .Z.get(`/api/tasks/${id}`);
     const task = await response.data;
     return task;
 }
