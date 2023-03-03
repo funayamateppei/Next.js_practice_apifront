@@ -36,7 +36,7 @@ const TaskPage = ({ tasks }) => {
                 <ul>
                     {swrTasks &&
                         swrTasks.map(task => (
-                            <Task key={task.id} task={task} />
+                            <Task key={task.id} task={task} taskDeleted={mutate} />
                         ))}
                 </ul>
             </div>
